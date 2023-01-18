@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--sweetalert2-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.16/sweetalert2.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <title>CRUD System</title>
+</head>
+<body>
+    
+<div class="add-course">
+<div class="container">
+<h1>CRUD System</h1>
+
+<form>  
+<div class="mb-3">
+<label for="">Course Name<span class="text-danger">*</span></label>
+<input class="inputs form-control mb-3" type="text" id="courseName" placeholder="course name">
+<div id="nameAlert" class="text-danger small d-none">*please start with capital letter</div>
+</div>
+
+<label for="">Course Category<span class="text-danger">*</span></label>
+<input class="inputs form-control" type="text" id="courseCategory" placeholder="course category">
+<div id="categoryAlert" class="text-danger small d-none">*please start with capital letter</div>
+
+<label for="">Course Price<span class="text-danger">*</span></label>
+<input class="inputs form-control" type="number" id="coursePrice" placeholder="course price">
+<div id="priceAlert" class="text-danger small d-none">*max 3 digit</div>
+
+
+<label for="">Course Description<span class="text-danger">*</span></label>
+<textarea class="inputs form-control" id="courseDescription" placeholder="course Description"></textarea>
+<div id="descAlert" class="text-danger small d-none">*please start with capital letter</div>
+
+<label for="">Course capacity<span class="text-danger">*</span></label>
+<input class="inputs form-control" type="number" id="courseCapacity" placeholder="course capacity">
+<div id="capAlert" class="text-danger small d-none">*max 3 digit</div>
+
+<input type="submit" value="Add Course" class="btn btn-outline-secondary mt-3" id="click"  disabled/>
+<button class="btn btn-outline-secondary mt-3" type="reset">clear</button> 
+  
+</form>
+</div>
+
+ 
+
+<div class="container">
+<input type="search" placeholder="search..." id="search" class="form-control my-3"> 
+<button id="deleteBtn" class="btn btn-outline-danger text-center my-3">delete all</button>
+
+<table class="table table table-striped">
+<thead>
+<tr>
+<th>#</th>
+<th>name</th>
+<th>category</th>
+<th>price</th>
+<th>description</th>
+<th>capacity</th>
+<th>update</th>
+<th>delete</th>
+</tr>
+</thead>
+ 
+<tbody id="data">
+ 
+
+</tbody>
+
+
+</table>
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<!--sweetalert2-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.16/sweetalert2.all.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
